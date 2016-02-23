@@ -11,11 +11,10 @@
     
     <?php $this->widget('yupe\widgets\YFlashMessages'); ?>
     <p class="lead text-center">
-        Получить оптовый <span class="nowrap">прайс-лист</span>
+        Задайте ваш вопрос.
     </p>
     <p class="text-muted text-center">
-        Пожалуйста укажите ваше имя или организацию и ваш email. 
-        Мы вышлем вам прайс лист в ответном письме. 
+        Мы ответим вам в ближайшее время. 
     </p>
     
     <div class="form">
@@ -44,6 +43,17 @@
             <?= $form->textFieldGroup($model, 'email'); ?>
         </div>
     </div>
+        
+    <div class='row'>
+        <div class="">
+            <?= $form->textAreaGroup(
+                $model,
+                'text',
+                ['widgetOptions' => ['htmlOptions' => ['rows' => 6]]]
+            ); ?>
+        </div>
+    </div>    
+        
     <p class="text-center">
         <?php
        $this->widget(
@@ -51,7 +61,7 @@
            [
                'buttonType' => 'submit',
                'context'    => 'primary',
-               'label'      => 'ПОЛУЧИТЬ',
+               'label'      => 'ОТПРАВИТЬ',
 
            ]
        ); ?>
@@ -61,4 +71,12 @@
 </div>
     
 </div>
+
+<?php
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 

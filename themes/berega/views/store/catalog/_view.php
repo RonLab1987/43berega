@@ -1,9 +1,9 @@
 <?php $productUrl = Yii::app()->createUrl('/store/catalog/show', ['name' => CHtml::encode($data->slug)]); ?>
-<div class="col-sm-4 col-item-block">
+<div class="col-sm-3 col-item-block">
     <div class="col-item">
         <div class="photo">
             <a href="<?= $productUrl; ?>">
-                <img src="<?= $data->getImageUrl(190, 150); ?>"/>
+                <img src="<?= $data->getImageUrl(300, 300); ?>" />
             </a>
         </div>
         <div class="info separator">
@@ -13,7 +13,7 @@
                         <a href="<?= $productUrl; ?>"><?= CHtml::encode($data->getName()); ?></a>
                     </h5>
                     <h5 class="price-text-color">
-                        <?= $data->getResultPrice(); ?> <i class="fa fa-rub"></i>
+                       от <?= $data->getResultPrice(); ?> <i class="fa fa-rub"></i>
                     </h5>
                 </div>
             </div>

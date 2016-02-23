@@ -27,7 +27,7 @@
                         <p class="lead text-uppercase text-center" >Остались вопросы?
                         <br >Мы готовы ответить!</p>
                         <p class="text-center">
-                            <a class="various" data-fancybox-type="iframe" href="/contacts">ЗАДАТЬ ВОПРОС</a>  
+                            <a class="various" data-fancybox-type="iframe" href="/question">ЗАДАТЬ ВОПРОС</a>  
                         </p>
                 </div>
                 

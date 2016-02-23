@@ -60,6 +60,10 @@ $this->breadcrumbs = array_merge(
                         <?php else:?>
                             <span class="label label-danger"><?= Yii::t("StoreModule.store", "Not in stock");?></span>
                         <?php endif;?>
+                            
+                        <h4><?= Yii::t("StoreModule.store", "Description"); ?></h4>
+                        
+                        <?= $product->description; ?>    
 
 
                         <div class="properties">
@@ -85,9 +89,8 @@ $this->breadcrumbs = array_merge(
                                 </div>
                             <?php } endforeach; ?>
                         </div>
-                        <br/>
-                        <h4><?= Yii::t("StoreModule.store", "Description"); ?></h4>
-                        <?= $product->short_description; ?>
+                        <br>
+                            
                         <?php if($product->getVariantsGroup()):?>
                             <hr/>
                             <h4><?= Yii::t("StoreModule.store", "Variants"); ?></h4>
@@ -99,6 +102,8 @@ $this->breadcrumbs = array_merge(
                                 Yii::app()->getRequest()->csrfTokenName,
                                 Yii::app()->getRequest()->csrfToken
                             ); ?>
+                            
+                            
                             <table class="table table-condensed">
                                 <?php foreach ($product->getVariantsGroup() as $title => $variantsGroup): { ?>
                                     <tr>
@@ -117,28 +122,20 @@ $this->breadcrumbs = array_merge(
                                     </tr>
                                 <?php } endforeach; ?>
                             </table>
+                            
+                                
                             <div>
                                 <input type="hidden" id="base-price" value="<?= round($product->getResultPrice(), 2); ?>"/>
+                                
+                                <h4>
+                                     Рекомендованная цена   
+                                </h4>
 
                                 <p>
-                                    <?= Yii::t("StoreModule.store", "Price"); ?>
-                                    : <?= round($product->getBasePrice(), 2); ?> <?= Yii::t("StoreModule.store", "RUB"); ?>
+                                    РРЦ: от <?= round($product->getBasePrice(), 2); ?> <?= Yii::t("StoreModule.store", "RUB"); ?>
                                 </p>
-
                                 <p>
-                                    <?= Yii::t("StoreModule.store", "Fix price with discount"); ?>
-                                    : <?= round($product->getDiscountPrice(), 2); ?>
-                                    <?= Yii::t("StoreModule.store", "RUB"); ?>
-                                </p>
-
-                                <p>
-                                    <?= Yii::t("StoreModule.store", "Discount"); ?>: <?= round($product->discount); ?>%
-                                </p>
-
-                                <p>
-                                    <?= Yii::t("StoreModule.store", "Total price"); ?>: <span
-                                        id="result-price"><?= round($product->getResultPrice(), 2); ?></span>
-                                    <?= Yii::t("StoreModule.store", "RUB"); ?>
+                                    <a class="various" data-fancybox-type="iframe" href="/price-list">ОПТОВЫЙ <span class="nowrap" >ПРАЙС-ЛИСТ</span></a>
                                 </p>
                             </div>
 
@@ -169,62 +166,19 @@ $this->breadcrumbs = array_merge(
                             <?php endif; ?>
                         </form>
                         <br>
-                        <hr>
+                        
+                         
+                            
                     </div>
                 </div>
+                
+                
             </div>
         </div>
+        
+        
         <div class="clearfix"></div>
-        <ul class="nav nav-tabs" id="myTab">
-            <li class="active"><a href="#description" data-toggle="tab"><?= Yii::t("StoreModule.store", "Description"); ?></a>
-            </li>
-            <li><a href="#data" data-toggle="tab"><?= Yii::t("StoreModule.store", "Data"); ?></a></li>
-            <li><a href="#attributes" data-toggle="tab"><?= Yii::t("StoreModule.store", "Characteristics"); ?></a></li>
-            <li><a href="#comments-tab" data-toggle="tab"><?= Yii::t("StoreModule.store", "Comments"); ?></a></li>
-        </ul>
-
-        <div class="tab-content">
-            <div class="tab-pane active" id="description">
-                <?= $product->description; ?>
-            </div>
-            <div class="tab-pane" id="data">
-                <?= $product->data; ?>
-            </div>
-            <div class="tab-pane" id="attributes">
-                <table>
-                    <tr>
-                        <td><b><?= Yii::t("StoreModule.producer", "Producer"); ?>:</b></td>
-                        <td><?= CHtml::encode($product->getProducerName()); ?></td>
-                    </tr>
-                    <tr>
-                        <td><b><?= Yii::t("StoreModule.store", "SKU"); ?>:</b></td>
-                        <td><?= CHtml::encode($product->sku); ?></td>
-                    </tr>
-                    <tr>
-                        <td><b><?= Yii::t("StoreModule.store", "Length"); ?>:</b></td>
-                        <td><?= round($product->length, 2); ?> <?= Yii::t("StoreModule.store", "m"); ?></td>
-                    </tr>
-                    <tr>
-                        <td><b><?= Yii::t("StoreModule.store", "Width"); ?>:</b></td>
-                        <td><?= round($product->width, 2); ?> <?= Yii::t("StoreModule.store", "m"); ?></td>
-                    </tr>
-                    <tr>
-                        <td><b><?= Yii::t("StoreModule.store", "Height"); ?>:</b></td>
-                        <td><?= round($product->height, 2); ?> <?= Yii::t("StoreModule.store", "m"); ?></td>
-                    </tr>
-                    <tr>
-                        <td><b><?= Yii::t("StoreModule.store", "Weight"); ?>:</b></td>
-                        <td><?= round($product->weight, 2); ?> <?= Yii::t("StoreModule.store", "kg"); ?></td>
-                    </tr>
-                </table>
-            </div>
-            <div class="tab-pane" id="comments-tab">
-                <?php $this->widget('application.modules.comment.widgets.CommentsWidget', [
-                    'redirectTo' => $product->getUrl(),
-                    'model' => $product,
-                ]); ?>
-            </div>
-        </div>
+        
     </div>
     <div class="col-sm-12">
         <?php $this->widget('application.modules.store.widgets.LinkedProductsWidget', ['product' => $product, 'code' => null,]); ?>

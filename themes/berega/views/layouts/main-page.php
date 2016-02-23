@@ -49,12 +49,12 @@
 		maxWidth	: 800,
 		maxHeight	: 600,
 		fitToView	: true,
-		width		: '70%',
-		height		: '70%',
+		width		: '450',
+		height		: '450',
 		autoSize	: false,
 		closeClick	: false,
-		openEffect	: 'none',
-		closeEffect	: 'none'
+		openEffect	: 'fade',
+		closeEffect	: 'fade'
 	});
 });
         

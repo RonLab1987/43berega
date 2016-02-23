@@ -125,15 +125,15 @@ $form = $this->beginWidget(
             <div class="col-sm-2">
                 <?= $form->textFieldGroup($model, 'price'); ?>
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-2 hide">
                 <?= $form->textFieldGroup($model, 'discount_price'); ?>
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-2 hide">
                 <?= $form->textFieldGroup($model, 'discount'); ?>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row hide">
             <div class="col-sm-7">
                 <div class="panel-group">
                     <div class="panel panel-default">
@@ -232,7 +232,7 @@ $form = $this->beginWidget(
             </div>
         </div>
 
-        <div class='row'>
+        <div class='row hide'>
             <div class="col-sm-12 <?= $model->hasErrors('short_description') ? 'has-error' : ''; ?>">
                 <?= $form->labelEx($model, 'short_description'); ?>
                 <?php $this->widget(
@@ -247,7 +247,7 @@ $form = $this->beginWidget(
             </div>
         </div>
 
-        <div class='row'>
+        <div class='row hide'>
             <div class="col-sm-12 <?= $model->hasErrors('data') ? 'has-error' : ''; ?>">
                 <?= $form->labelEx($model, 'data'); ?>
                 <?php $this->widget(

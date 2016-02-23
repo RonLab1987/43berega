@@ -24,26 +24,41 @@
     Yii::app()->getClientScript()->registerCssFile($mainAssets . '/css/yupe.css');
     */
     Yii::app()->getClientScript()->registerCssFile($mainAssets . '/css/agency.css');  
+    Yii::app()->getClientScript()->registerCssFile($mainAssets . '/fancybox/jquery.fancybox.css');  
     
-    /*
     Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/blog.js');
     Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/bootstrap-notify.js');
     Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/jquery.li-translit.js');
-    Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/classie.js');
-    Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/agency.js');
-    */
+    
     //Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/jquery.js');
    // Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/cbpAnimatedHeader.min.js');
-    
+    Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/classie.js');
    // Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/contact_me.js');
    // Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/jqBootstrapValidation.js');
-    
+    Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/agency.js');
+    Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/fancybox/jquery.fancybox.pack.js');
+     
     
     
     ?>
     <script type="text/javascript">
         var yupeTokenName = '<?= Yii::app()->getRequest()->csrfTokenName;?>';
         var yupeToken = '<?= Yii::app()->getRequest()->getCsrfToken();?>';
+        
+        
+        $(document).ready(function() {
+	$(".various").fancybox({
+		maxWidth	: 800,
+		maxHeight	: 600,
+		fitToView	: true,
+		width		: '450',
+		height		: '450',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'fade',
+		closeEffect	: 'fade'
+	});
+});
     </script>
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
