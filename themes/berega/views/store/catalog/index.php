@@ -58,5 +58,11 @@ $this->breadcrumbs = [Yii::t("StoreModule.store", "Catalog")];
         
     </div>
 </div>
+<div class="row">
+    <div class="bg-info col-sm-12 text-center">
+        В связи с переносом сайта на новую платформу каталог наполнен лишь частично. <br>
+        Что-бы получить больше информации, пожалуйста свяжитесь с нами ( <a href="#contacts">Контакты</a> ).
+    </div>
+</div>
 
     </div>
