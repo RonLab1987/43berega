@@ -16,7 +16,7 @@
                     <p>
                         <span class="text-muted"><small><em>написать</em></small></span><br>
                         <!--span class=""><small>когда вам угодно</small></span><br-->
-                        <span class="lead"><span class="fa fa-envelope "></span> <a href="mailto:mail@43berega.ru" > mail@43berega.ru</a></span>
+                        <span class="lead"><span class="fa fa-envelope "></span> <a href="mailto:43berega@mail.ru" >43berega@mail.ru</a></span>
                         
                     </p>
                 </address>

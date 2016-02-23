@@ -165,7 +165,7 @@
                                 <div class="timeline-body">
                                     <p class="text-muted">
                                         Вы получаете на e-mail прайс-лист и заказные формы (<a class="various" data-fancybox-type="iframe" href="/price-list">заказать</a>). 
-                                        Формируете заказ и отправляете его нам ответным письмом на <a href="mailto:mail@43berega.ru">mail@43berega</a> 
+                                        Формируете заказ и отправляете его нам ответным письмом на <a href="mailto:43berega@mail.ru">43berega@mail.ru</a> 
                                     </p>
                                 </div>
                             </div>
