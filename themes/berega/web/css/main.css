@@ -1,7 +1,7 @@
 /* general */
 body {
-    padding-top: 65px;
-    padding-bottom: 20px;
+  //  padding-top: 65px;
+  //  padding-bottom: 20px;
 }
 
 /* Copyright 2013 Soundarapandian
@@ -12,7 +12,7 @@ body {
     /* Below styles are used only for pricing table demo purpose.
      * and these styles are not required to integrate the pricing table
      * into your application */
-    padding-bottom: 50px;
+    //padding-bottom: 50px;
     /*background-image: url('../images/background.png');*/
 }
 

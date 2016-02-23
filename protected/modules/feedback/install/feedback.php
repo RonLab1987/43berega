@@ -26,6 +26,8 @@ return [
     'component' => [],
     'rules'     => [
         '/contacts'                             => '/feedback/contact/index',
+       '/price-list'                             => '/feedback/contact/priceForm',
+       '/qestion'                             => '/feedback/contact/qestionForm',
         '/faq'                                  => '/feedback/contact/faq',
         '/faq/<id:\d+>'                         => '/feedback/contact/faqView',
         '/feedback/contact/captcha/refresh/<v>' => '/feedback/contact/captcha/refresh',

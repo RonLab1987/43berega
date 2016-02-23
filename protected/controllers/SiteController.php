@@ -13,6 +13,9 @@
 namespace application\controllers;
 
 use yupe\components\controllers\FrontController;
+//use feedback\models\FeedBackForm;
+
+//Yii::import('application.modules.user.models.User');
 
 class SiteController extends FrontController
 {
@@ -22,7 +25,8 @@ class SiteController extends FrontController
      * @return void
      */
     public function actionIndex()
-    {
+    {  // $contact = new FeedBackForm();
+       // $this->render('index',['contact' => $contact ]);
         $this->render('index');
     }
 

@@ -18,6 +18,7 @@ $this->breadcrumbs = array_merge(
     [CHtml::encode($product->name)]
 );
 ?>
+<div class="container">
 <div class="row" xmlns="http://www.w3.org/1999/html">
     <div class="col-sm-12">
         <div class="row">
@@ -229,7 +230,7 @@ $this->breadcrumbs = array_merge(
         <?php $this->widget('application.modules.store.widgets.LinkedProductsWidget', ['product' => $product, 'code' => null,]); ?>
     </div>
 </div>
-
+</div>
 <?php Yii::app()->getClientScript()->registerScript(
     "product-images",
     <<<JS

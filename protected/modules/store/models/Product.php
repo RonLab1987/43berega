@@ -106,6 +106,11 @@ class Product extends yupe\models\YModel implements ICommentable
                 'store\components\validators\NumberValidator'
             ],
             ['name, meta_keywords, meta_title, meta_description, image', 'length', 'max' => 250],
+            
+            //change go
+            ['average_price, purchase_price, recommended_price', 'default', 'value' => null],
+            //change end
+            
             ['discount_price, discount', 'default', 'value' => null],
             ['sku', 'length', 'max' => 100],
             ['slug', 'length', 'max' => 150],

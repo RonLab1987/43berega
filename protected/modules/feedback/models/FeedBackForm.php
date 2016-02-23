@@ -25,7 +25,8 @@ class FeedBackForm extends CFormModel implements IFeedbackForm
         $module = Yii::app()->getModule('feedback');
 
         return [
-            ['name, email, theme, text', 'required'],
+            ['name, email', 'required'],
+            ['theme, text','default', 'value' => '-'],
             ['type', 'numerical', 'integerOnly' => true],
             ['name, email, phone', 'length', 'max' => 150],
             ['theme', 'length', 'max' => 250],

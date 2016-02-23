@@ -4,7 +4,7 @@ $this->widget(
     'bootstrap.widgets.TbNavbar',
     [
         'collapse' => true,
-        'brand' => CHtml::image(
+        /*'brand' => CHtml::image(
             Yii::app()->getTheme()->getAssetsUrl() . '/images/logo.png',
             Yii::app()->name,
             [
@@ -12,7 +12,8 @@ $this->widget(
                 'height' => '38',
                 'title' => Yii::app()->name,
             ]
-        ),
+        ),*/
+        'brand' => '«ВЯТСКИЕ БЕРЕГА»',
         'brandUrl' => Yii::app()->hasModule('homepage') ? ['/homepage/hp/index'] : ['/site/index'],
         'items' => [
             CMap::mergeArray(

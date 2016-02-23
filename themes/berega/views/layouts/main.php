@@ -18,24 +18,26 @@
 
     <?php
     $mainAssets = Yii::app()->getTheme()->getAssetsUrl();
-
+/*
     Yii::app()->getClientScript()->registerCssFile($mainAssets . '/css/main.css');
     Yii::app()->getClientScript()->registerCssFile($mainAssets . '/css/flags.css');
     Yii::app()->getClientScript()->registerCssFile($mainAssets . '/css/yupe.css');
-    
+    */
     Yii::app()->getClientScript()->registerCssFile($mainAssets . '/css/agency.css');  
     
-    
+    /*
     Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/blog.js');
     Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/bootstrap-notify.js');
     Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/jquery.li-translit.js');
-    
+    Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/classie.js');
+    Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/agency.js');
+    */
     //Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/jquery.js');
    // Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/cbpAnimatedHeader.min.js');
-    Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/classie.js');
+    
    // Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/contact_me.js');
    // Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/jqBootstrapValidation.js');
-    Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/agency.js');
+    
     
     
     ?>
@@ -48,26 +50,53 @@
     <![endif]-->
     <link rel="stylesheet" href="http://yandex.st/highlightjs/8.2/styles/github.min.css">
     <script src="http://yastatic.net/highlightjs/8.2/highlight.min.js"></script>
-    <?php \yupe\components\TemplateEvent::fire(BeregaThemeEvents::HEAD_END);?>
-</head>
 
-<body>
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+     <!-- Plugin JavaScript -->
+    <!--script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+
+    <script src="js/agency.js"></script-->
+    
+</head>
+    <?php \yupe\components\TemplateEvent::fire(BeregaThemeEvents::HEAD_END);?>
+
+
+
 
 <?php \yupe\components\TemplateEvent::fire(BeregaThemeEvents::BODY_START);?>
+
+
+<body id="page-top" class="index">
 
 <?php if (Yii::app()->hasModule('menu')): ?>
     <?php $this->widget('application.modules.menu.widgets.MenuWidget', ['name' => 'top-menu']); ?>
 <?php endif; ?>
     <!-- content -->
-
+    <section class="bg-white">
+        <div class="container">
         <?= $content; ?>
-
-    <!-- footer -->
-<section>    
-    <div class='container'>
-        <?php $this->renderPartial('//layouts/_footer'); ?>
     </div>
-</section>
+    </section>    
+    
+        
+<!-- footer -->
+    <?php $this->renderPartial('//layouts/_footer'); ?>
+    <!-- footer end -->
     
 <div class='notifications top-right' id="notifications"></div>
 <!-- container end -->
@@ -78,7 +107,17 @@
     ); ?>
 <?php endif; ?>
 
-<?php \yupe\components\TemplateEvent::fire(BeregaThemeEvents::BODY_END);?>
+<?php
+    
+    Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/blog.js');
+    Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/bootstrap-notify.js');
+    Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/jquery.li-translit.js');
+    Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/classie.js');
+    Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/agency.js');
+    
+?>
 
+
+<?php \yupe\components\TemplateEvent::fire(BeregaThemeEvents::BODY_END);?>
 </body>
 </html>

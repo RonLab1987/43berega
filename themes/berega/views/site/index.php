@@ -1,50 +1,252 @@
-<?php $this->pageTitle = Yii::app()->getModule('yupe')->siteName;?>
+<?php /*$this->widget(
+    "application.modules.contentblock.widgets.ContentBlockWidget",
+    array("code" => "menu"));*/
+    //Yii::import('application.modules.feedback.controllers.ContactController');
+    $this->layout = 'main-page';
 
-<h1>Congratulations!</h1>
-<p>You just have installed <a href="http://yupe.ru?from=mainpage" target='_blank'>Yupe! CMS</a>! We hope it was simple
-    and you haven't got any problems!?</p>
-<div class='alert alert-warning'>
-    <p><b>If you have questions about development and support - <a href='http://yupe.ru/contacts?from=mainpage-support'
-                                                                   target='_blank'>write us</a> !</b></p>
+?>
 
-    <p>Read us in <a href='http://twitter.com/yupecms' target='_blank'>twitter</a>, <a href='http://vk.com/amylabs'
-                                                                                       target='_blank'>Vk.com</a>, <a
-            href="https://www.facebook.com/amylabs.ru" target='_blank'>Facebook</a> or in <a
-            href="https://plus.google.com/u/0/b/111468098477631231532/111468098477631231532/posts" target='_blank'>Google+</a>
-    </p>
-</div>
-<?php if (YII_DEBUG === true) : ?>
-    <p class='alert alert-info'>
-        If you have noticed that site work slowly - don't panic. It because debug mode is (YII_DEBUG) enabled. If you
-        disable it, site will work much more faster.
-        No reasons to be worried, when you deploy your site on production server, debug mode will de disabled
-        automaticly.
-    </p>
-<?php endif; ?>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="head-area">
+                    <h1>Снаряжение для водного туризма</h1>
+                    <h2>оптом от производителя</h2>
+                    <h3>вёсла | катамараны | гермоупаковки | комплектующие</h3>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 ">
+                    <div class="form-border">
+                        <a class="call-form various" data-fancybox-type="iframe" href="/price-list">ПОЛУЧИТЬ ОПТОВЫЙ <span class="nowrap" >ПРАЙС-ЛИСТ</span></a>
+                    </div>
+                </div>
+            </div>
+            <span class="fa fa-2x fa-chevron-down text-center chevron"></span>
+            
+        </div>
+    </header>
 
-<p> You can start to edit you site from <code>SiteController</code> edition (/protected/controllers/SiteController)</p>
-<P> We made some blanks for you, for example, list of posts (from "Blog" module) you can find <?= CHtml::link(
-        'here',
-        ['/site/main']
-    ) ?> (SiteController/actionMain)</P>
-<p> For site management, please go to <?= CHtml::link('Control Panel', ['/yupe/backend/']); ?></p>
+    <!-- About Section -->
+    <section id="About" class="bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">«ВЯТСКИЕ БЕРЕГА»</h2>
+                    <h3 class="section-subheading text-muted">Производим снаряжение для ваших приключений.</h3>
+                </div>
+            </div>
+            <div class="row service-image">
+                
+                <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-8 co-lg-8    ">
+                    <p class="lead">Производим снаряжение более 10 лет.</p> 
+                    <p>Первые катамараны мы изготовили  в 2005 году для личного пользования. 
+                        И они отлично себя зарекомендовали. 
+                        Со временем наше увлечение выросло в профессиональную деятельность. 
+                        Сегодня мы располагаем значительным опытом конструкторской работы, 
+                        всем необходимым оборудованием, квалифицированным персоналом, налаженными 
+                        производственными процесами. И мы продолжаем расти.</p>
+                    <p class="lead">
+                       Требовательны к качеству.
+                    </p>
+                    <p>
+                        Качество производимого снаряжения — наш приоритет. 
+                        Мы обеспечиваем полный цикл производства с контролем 
+                        на каждом этапе, используем только проверенные материалы
+                        и технологии. 
+                    </p>
+                    <p class="lead">
+                       Лично испытываем снаряжение.
+                    </p>
+                    
+                    <p>
+                      Все наше снаряжение мы лично испытываем в реальных походах, в том числе на реках 5-6 категорий сложности.
+                      Именно это помогает нам находить лучшие конструкторские решения и делать лучшее в своем классе снаряжение.
+                    </p>
+                </div>
+                
+            </div>
+        </div>    
+    </section> 
 
-<p> If you have questions or problems - review this sources:
-<ul>
-    <li>Our <a href='http://yupe.ru/talk/?from=mainpage'>forum</a></li>
-    <li><a href='https://github.com/yupe/yupe/issues'>Github</a></li>
-    <li>Our documentation <a href='http://yupe.ru/docs/index.html?from=mainpage'> we are working around it</a></li>
-</ul>
+    <!-- Product Grid Section -->
+    <section id="product" class="bg-river">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Продукция </h2>
+                    <h3 class="section-subheading text-muted">Мы производим следующие виды снаряжения для водного туризма</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="/store" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-chevron-circle-right fa-3x"></i><br>
+                                перейти в каталог
+                            </div>
+                        </div>
+                        <img src="images/veslo.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Вёсла</h4>
+                        <p class="text-muted">Байдарочные, катамаранные</p>
+                        <p class="text-center"><a href="/store" class="small">смотреть в каталоге</a></p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="/store" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-chevron-circle-right fa-3x"></i><br>
+                                перейти в каталог
+                            </div>
+                        </div>
+                        <img src="images/katamaran.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Катамараны</h4>
+                        <p class="text-muted">В сборе и комплектующие</p>
+                        <p class="text-center"> <a href="/store" class="small">смотреть в каталоге</a></p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="/store" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-chevron-circle-right fa-3x"></i><br>
+                                перейти в каталог
+                            </div>
+                        </div>
+                        <img src="images/germa.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Гермоупаковки</h4>
+                        <p class="text-muted">От нагрудных до 150 л.</p>
+                        <p class="text-center"><a href="/store" class="small">смотреть в каталоге</a></p>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
 
-<p>Yupe! extensions and widgets repository, you can found here: <a href="https://github.com/yupe/yupe-ext"
-                                                                   target="_blank">https://github.com/yupe/yupe-ext</a>
-</p>
 
-<p><a href='http://yupe.ru/pages/help?from=mainpage' target='_blank'> Maybe you want to connect us for development our
-        project together, or maybe you want to help us?</a></p>
+    
+    <!--  Job Rules Section -->
+    <section id="order-flow" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Порядок работы</h2>
+                    <h3 class="section-subheading text-muted">Мы придерживаемся простой и прозрачной схемы работы<br> с нашими клиентами.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="images/zakaz.jpg" alt="">
+                                
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <!--h4>2009-2011</h4-->
+                                    <h4 class="subheading">ЗАКАЗ</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        Вы получаете на e-mail прайс-лист и заказные формы (<a href="#">заказать</a>). 
+                                        Формируете заказ и отправляете его нам ответным письмом на <a href="mailto:mail@43berega.ru">mail@43berega</a> 
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="images/oplata.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    
+                                    <h4 class="subheading">ОПЛАТА</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        Мы выставляем вам счет, вы оплачиваете его удобным для вас способом. 
+                                        Счет действителен в течении 5 рабочих дней.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="images/dostavka.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    
+                                    <h4 class="subheading">ДОСТАВКА</h4>
+                                    
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        При получении оплаты мы отправляем ваш заказ в 
+                                        течении 4-х рабочих дней транспортной компанией.
+                                        Через несколько дней вся продукция у вас.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        
+                       
+                    </ul>
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <p class="text-center">
+                    <span class="fa fa-2x fa-chevron-down chevron"></span>
+                </p>
+                
+            </div>
+             
+        </div>
+    </section>
+    
+   <!-- Price Form Section -->
+   
+   <section id='price-form'>
+       <div class="container">
+            <div class="row text-center">
+                <h2 class="section-heading">оптовый прайс-лист</h2>
+                <h3 class="section-subheading">
+                    Чтобы получить оптовый прайс-лист и формы заказа воспользуйтесь ссылкой ниже.<br>
+                    Мы ответим вам насколько возможно быстро.             
+                </h3>                
+            </div>
+           <div class="row text-center">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 ">
+                    <div class="form-border">
+                        <a class="call-form various" data-fancybox-type="iframe" href="/price-list">ПОЛУЧИТЬ ОПТОВЫЙ <span class="nowrap" >ПРАЙС-ЛИСТ</span></a>
+                    </div>
+                </div>
+       </div>
+           
+        
+       
+   </section>
 
-<div class="alert">
-    <p>Donate us!</p>
 
-    <p>Yandex money on <b>41001846363811</b></p>
-</div>
+
+    
+
+   
