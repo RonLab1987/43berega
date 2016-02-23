@@ -8,12 +8,13 @@
         </div>
         <div class="info separator">
             <div class="row">
-                <div class="price col-sm-12">
+                <div class="price col-sm-12 text-center">
                     <h5>
                         <a href="<?= $productUrl; ?>"><?= CHtml::encode($data->getName()); ?></a>
                     </h5>
+                    
                     <h5 class="price-text-color">
-                       от <?= $data->getResultPrice(); ?> <i class="fa fa-rub"></i>
+                        РРЦ: от  <?= $data->getResultPrice(); ?> <i class="fa fa-rub"></i>
                     </h5>
                 </div>
             </div>
