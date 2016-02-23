@@ -30,7 +30,7 @@ return [
     // контроллер по умолчанию
     'defaultController' => 'site',
     // название приложения
-    'name' => 'Yupe!',
+    'name' => 'ВЯТСКИЕ БЕРЕГА - Снаряжение оптом от производителя',
     // язык по умолчанию
     'language' => 'ru',
     'sourceLanguage' => 'en',
@@ -150,7 +150,7 @@ return [
             'routes' => [
                 [
                     'class' => 'CFileLogRoute',
-                    'levels' => 'error, warning, info, trace, profile', // на продакшн лучше оставить error, warning
+                    'levels' => 'error, warning'//, info, trace, profile', // на продакшн лучше оставить error, warning
                 ]
             ]
         ],
